@@ -1,0 +1,1 @@
+docker build -t alvinlucillo/k8todo-frontend -f ./Dockerfile ./

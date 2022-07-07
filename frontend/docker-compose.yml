@@ -1,0 +1,14 @@
+version: '3'
+services: 
+    frontend:
+        build: 
+            context: .
+            dockerfile: .Dockerfile
+        command: npm run start
+        container_name: frontend
+        image: frontend
+        ports:
+            - "3000:3000"        
+        volumes: 
+            - ./:/app
+            - /app/node_modules

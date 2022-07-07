@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: frontend-depl
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+    app: frontend
+ template:
+   metadata:
+    name: frontend-pod
+    labels:
+     app: frontend
+   spec:
+    containers:
+     - name: frontend
+       image: alvinlucillo/k8todo-frontend:latest
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+ name: frontend-srv
+spec:
+ type: ClusterIP
+ selector:
+  app: frontend
+ ports:
+  - port: 3001
+    targetPort: 3000
