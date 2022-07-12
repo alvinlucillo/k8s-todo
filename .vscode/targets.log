@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  7 19:33:30 2022
+# Make data base, printed on Tue Jul 12 19:15:06 2022
 
 # Variables
 
@@ -25,15 +27,13 @@ XDG_SESSION_CLASS = user
 # environment
 XDG_SESSION_TYPE = wayland
 # environment
-VSCODE_LOG_NATIVE = false
-# environment
 NVM_INC = /home/alucillo/.nvm/versions/node/v14.19.3/include/node
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.AYJYO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.85D9O1
 # environment
 GDMSESSION = ubuntu-wayland
 # environment
@@ -47,7 +47,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/share/code/code
 # environment
-JOURNAL_STREAM = 8:43007
+JOURNAL_STREAM = 8:46713
 # makefile
 MAKEFILE_LIST := 
 # automatic
@@ -61,23 +61,19 @@ XDG_DATA_DIRS = /usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-MANAGERPID = 1733
+MANAGERPID = 1787
 # environment
 P9K_SSH = 0
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-dd726e30-fd2f-4b47-a0c9-40a76464c462.sock
 # environment
 VSCODE_CWD = /home/alucillo
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/alucillo/.nvm/versions/node/v14.19.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/alucillo/go/bin:/home/alucillo/google-cloud-sdk/bin:/home/alucillo/bin/evans_linux_amd64
+PATH = /home/alucillo/.nvm/versions/node/v14.19.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/alucillo/go/bin:/home/alucillo/google-cloud-sdk/bin:/home/alucillo/bin/evans_linux_amd64:/home/alucillo/cloud-sql-proxy
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/ubuntu-machine:@/tmp/.ICE-unix/1863,unix/ubuntu-machine:/tmp/.ICE-unix/1863
+SESSION_MANAGER = local/ubuntu-machine:@/tmp/.ICE-unix/1919,unix/ubuntu-machine:/tmp/.ICE-unix/1919
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -87,11 +83,9 @@ NVM_BIN = /home/alucillo/.nvm/versions/node/v14.19.3/bin
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
-VSCODE_LOG_STACK = false
-# environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 2b38dec6fb094ce5babf876ddc6e79b7
+INVOCATION_ID = 00f707215b9f453b80db4a5404c8f30b
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -101,15 +95,13 @@ XDG_SESSION_DESKTOP = ubuntu-wayland
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 6865
+GIO_LAUNCHED_DESKTOP_FILE_PID = 14448
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
 GNOME_SETUP_DISPLAY = :1
-# environment
-VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /home/alucillo/Documents/training/k8-todo
 # default
@@ -123,7 +115,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/alucillo
 # environment
-VSCODE_CODE_CACHE_PATH = /home/alucillo/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /home/alucillo/.config/Code/CachedData/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9
 # environment
 LOGNAME = alucillo
 # environment
@@ -173,7 +165,7 @@ OLDPWD = /home/alucillo
 # environment
 LANGUAGE = en_PH:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-6ef2a61e-1.68.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-6ef2a61e-1.69.0-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -217,9 +209,9 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 6865
+VSCODE_PID = 14448
 # variable set hash-table stats:
-# Load=104/1024=10%, Rehash=0, Collisions=10/126=8%
+# Load=99/1024=10%, Rehash=0, Collisions=10/121=8%
 
 # Pattern-specific Variable Values
 
@@ -280,14 +272,11 @@ GNUmakefile:
 # No general ('VPATH' variable) search path.
 
 # strcache buffers: 1 (0) / strings = 14 / storage = 118 B / avg = 8 B
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # current buf: size = 8162 B / used = 118 B / count = 14 / avg = 8 B
 
 # strcache performance: lookups = 17 / hit rate = 17%
 # hash-table stats:
 # Load=14/8192=0%, Rehash=0, Collisions=1/17=6%
-# Finished Make data base on Thu Jul  7 19:33:30 2022
+# Finished Make data base on Tue Jul 12 19:15:06 2022
 
  
