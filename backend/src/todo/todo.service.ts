@@ -13,7 +13,7 @@ export class TodoService {
   ) {}
 
   create(createTodoDto: CreateTodoDto) {
-    return 'This action adds a new todo';
+    return this.todoModel.create(createTodoDto);
   }
 
   findAll() {
@@ -21,14 +21,25 @@ export class TodoService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} todo`;
+    return this.todoModel.findById(id).exec();
   }
 
-  update(id: number, updateTodoDto: UpdateTodoDto) {
-    return `This action updates a #${id} todo`;
+  async update(id: number, updateTodoDto: UpdateTodoDto) {
+    let todo = await this.todoModel.findById(id);
+    todo.isChecked = updateTodoDto.isChecked;
+    todo.title = updateTodoDto.title;
+
+    return todo.save();
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} todo`;
+  async remove(id: number) {
+    let todo = await this.todoModel.findById(id);
+
+    if (todo) {
+      await todo.delete();
+      return true;
+    } else {
+      return false;
+    }
   }
 }

@@ -2,37 +2,39 @@ import { Box, Divider } from "@mui/material";
 import { Todo } from "../types/Todo";
 import TodoList from "../components/todo/TodoList";
 import { useState, useEffect } from "react";
-import { IAddTodoAction, ITodoActions } from "../types";
+import { ITodoActions } from "../types";
 import NewTodo from "../components/todo/ NewTodo";
+
+import { createTodo, getAllTodos } from "../services";
 
 function TodoPage() {
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  const deleteTodo = (id: number) => {
+  const deleteTodo = (id: string) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  const addTodo = (todo: Todo) => {
-    setTodos((prevTodos) => {
-      return [...prevTodos, todo];
-    });
+  const addTodo = async (title: string, isChecked: boolean) => {
+    // setTodos((prevTodos) => {
+    //   return [...prevTodos, todo];
+    // });
+
+    await createTodo(title, isChecked);
+
+    await refreshTodosList();
+  };
+
+  const refreshTodosList = async () => {
+    let resp = await getAllTodos();
+    console.log(resp.data);
+
+    setTodos(resp.data);
   };
 
   useEffect(() => {
-    let tmp: Todo[] = [
-      {
-        id: 1,
-        title: "hello",
-        isChecked: false,
-      },
-      {
-        id: 2,
-        title: "hello",
-        isChecked: false,
-      },
-    ];
-
-    setTodos(tmp);
+    (async () => {
+      await refreshTodosList();
+    })();
   }, []);
 
   const actions: ITodoActions = {

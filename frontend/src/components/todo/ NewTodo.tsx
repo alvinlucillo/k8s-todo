@@ -11,7 +11,7 @@ const NewTodo = (props: { addTodo: IAddTodoAction }) => {
   };
 
   const onAddTodo = () => {
-    props.addTodo(new Todo(4, title, false));
+    props.addTodo(title, false);
   };
 
   return (
