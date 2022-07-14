@@ -9,13 +9,15 @@ import { Delete as DeleteIcon } from "@mui/icons-material";
 function TodoItem(props: { todo: Todo; actions: ITodoActions }) {
   const [isChecked, setIsChecked] = useState(false);
 
+  const onChecked = () => {
+    setIsChecked(!isChecked);
+
+    props.actions.updateTodo({ ...props.todo, isChecked: !isChecked });
+  };
+
   useEffect(() => {
     setIsChecked(props.todo.isChecked);
   }, [props.todo]);
-
-  const onChecked = () => {
-    setIsChecked(!isChecked);
-  };
 
   return (
     <div>

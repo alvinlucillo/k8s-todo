@@ -11,7 +11,10 @@ const NewTodo = (props: { addTodo: IAddTodoAction }) => {
   };
 
   const onAddTodo = () => {
+    if (title.length == 0) return;
+
     props.addTodo(title, false);
+    setTitle("");
   };
 
   return (

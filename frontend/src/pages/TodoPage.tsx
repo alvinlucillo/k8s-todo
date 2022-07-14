@@ -5,28 +5,33 @@ import { useState, useEffect } from "react";
 import { ITodoActions } from "../types";
 import NewTodo from "../components/todo/ NewTodo";
 
-import { createTodo, getAllTodos } from "../services";
+import {
+  createTodo,
+  getAllTodos,
+  deleteTodoById,
+  updateTodoById,
+} from "../services";
 
 function TodoPage() {
   const [todos, setTodos] = useState<Todo[]>([]);
 
-  const deleteTodo = (id: string) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+  const deleteTodo = async (id: string) => {
+    await deleteTodoById(id);
+    await refreshTodosList();
   };
 
   const addTodo = async (title: string, isChecked: boolean) => {
-    // setTodos((prevTodos) => {
-    //   return [...prevTodos, todo];
-    // });
-
     await createTodo(title, isChecked);
+    await refreshTodosList();
+  };
 
+  const updateTodo = async (todo: Todo) => {
+    await updateTodoById(todo);
     await refreshTodosList();
   };
 
   const refreshTodosList = async () => {
     let resp = await getAllTodos();
-    console.log(resp.data);
 
     setTodos(resp.data);
   };
@@ -38,8 +43,9 @@ function TodoPage() {
   }, []);
 
   const actions: ITodoActions = {
-    deleteTodo: deleteTodo,
-    addTodo: addTodo,
+    deleteTodo,
+    addTodo,
+    updateTodo,
   };
 
   return (

@@ -4,3 +4,7 @@
 # docker run -d -p 3002:27017 --name k8todo-db mongo:latest
 
 #  docker ps -a --filter "name=k8todo-frontend" 
+
+
+# Backend
+# docker build . -t alvinlucillo/k8todo-backend

@@ -7,6 +7,12 @@ function TodoList(props: ITodoProps) {
       {props.todos.map((todo) => (
         <TodoItem key={todo.id} todo={todo} actions={props.actions} />
       ))}{" "}
+      {props.todos && props.todos.length == 0 && (
+        <span>
+          <br />
+          Nothing to do &nbsp; (╥_╥)
+        </span>
+      )}
     </div>
   );
 }

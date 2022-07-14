@@ -24,7 +24,7 @@ export class TodoService {
     return this.todoModel.findById(id).exec();
   }
 
-  async update(id: number, updateTodoDto: UpdateTodoDto) {
+  async update(id: string, updateTodoDto: UpdateTodoDto) {
     let todo = await this.todoModel.findById(id);
     todo.isChecked = updateTodoDto.isChecked;
     todo.title = updateTodoDto.title;
@@ -32,7 +32,7 @@ export class TodoService {
     return todo.save();
   }
 
-  async remove(id: number) {
+  async remove(id: string) {
     let todo = await this.todoModel.findById(id);
 
     if (todo) {
