@@ -15,3 +15,10 @@ spec:
             name: frontend-srv
             port:
               number: 3000
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: backend-srv
+            port:
+              number: 3001
