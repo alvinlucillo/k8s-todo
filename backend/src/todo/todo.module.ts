@@ -6,7 +6,7 @@ import { Todo, TodoSchema } from './entities/todo.entity';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:3002/'),
+    MongooseModule.forRoot('mongodb://mongo-srv:27017/'),
     MongooseModule.forFeature([
       {
         name: Todo.name,

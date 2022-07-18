@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 15 20:22:40 2022
+# Make data base, printed on Mon Jul 18 17:50:11 2022
 
 # Variables
 
@@ -31,7 +31,7 @@ NVM_INC = /home/alucillo/.nvm/versions/node/v14.19.3/include/node
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.85D9O1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.PRWBP1
 # environment
 GDMSESSION = ubuntu-wayland
 # environment
@@ -45,9 +45,9 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/share/code/code
 # environment
-JOURNAL_STREAM = 8:46713
-# makefile
-MAKEFILE_LIST := 
+JOURNAL_STREAM = 8:53515
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
 # environment
@@ -59,7 +59,7 @@ XDG_DATA_DIRS = /usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-MANAGERPID = 1787
+MANAGERPID = 2013
 # environment
 P9K_SSH = 0
 # environment
@@ -71,7 +71,7 @@ PATH = /home/alucillo/.nvm/versions/node/v14.19.3/bin:/usr/local/sbin:/usr/local
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/ubuntu-machine:@/tmp/.ICE-unix/1919,unix/ubuntu-machine:/tmp/.ICE-unix/1919
+SESSION_MANAGER = local/ubuntu-machine:@/tmp/.ICE-unix/2146,unix/ubuntu-machine:/tmp/.ICE-unix/2146
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -83,7 +83,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 00f707215b9f453b80db4a5404c8f30b
+INVOCATION_ID = 78677ce4e3eb4cd5832819ac9916c1e9
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -93,7 +93,7 @@ XDG_SESSION_DESKTOP = ubuntu-wayland
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3699934
+GIO_LAUNCHED_DESKTOP_FILE_PID = 23991
 # automatic
 %F = $(notdir $%)
 # environment
@@ -113,11 +113,11 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/alucillo
 # environment
-VSCODE_CODE_CACHE_PATH = /home/alucillo/.config/Code/CachedData/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9
+VSCODE_CODE_CACHE_PATH = /home/alucillo/.config/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
 # environment
 LOGNAME = alucillo
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 NVM_CD_FLAGS = -q
 # environment
@@ -145,7 +145,7 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = alucillo
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := build-app
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # environment
@@ -163,7 +163,7 @@ OLDPWD = /home/alucillo
 # environment
 LANGUAGE = en_PH:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-6ef2a61e-1.69.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-6ef2a61e-1.69.1-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -207,9 +207,9 @@ GJS_DEBUG_OUTPUT = stderr
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3699934
+VSCODE_PID = 23991
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=10/121=8%
+# Load=99/1024=10%, Rehash=0, Collisions=10/124=8%
 
 # Pattern-specific Variable Values
 
@@ -217,9 +217,9 @@ VSCODE_PID = 3699934
 
 # Directories
 
-# . (device 66308, inode 12714848): 7 files, no impossibilities.
+# . (device 66308, inode 12714848): 8 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -234,19 +234,49 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+push-images:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 15):
+	docker push alvinlucillo/k8todo-frontend
+	docker push alvinlucillo/k8todo-backend
+
+build-images:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 5):
+	cd frontend; docker build . -t alvinlucillo/k8todo-frontend
+	cd backend; docker build . -t alvinlucillo/k8todo-backend
+
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-07-17 16:28:49.917978178
 #  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
 
-# Not a target:
-makefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+push-image-fe:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 19):
+	docker push alvinlucillo/k8todo-frontend
+
+build-image-fe:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 9):
+	cd frontend; docker build . -t alvinlucillo/k8todo-frontend
+
+push-image-be:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 22):
+	docker push alvinlucillo/k8todo-backend
 
 # Not a target:
 .DEFAULT:
@@ -254,29 +284,37 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-GNUmakefile:
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+build-image-be:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+make: *** No rule to make target 'all'.  Stop.
+
+#  recipe to execute (from 'Makefile', line 12):
+	cd backend; docker build . -t alvinlucillo/k8todo-backend
+
+build-app:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 2):
+	cd infra; kubectl apply -f .
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# Load=11/1024=1%, Rehash=0, Collisions=0/21=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 126 B / avg = 8 B
-# current buf: size = 8162 B / used = 126 B / count = 15 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 198 B / avg = 9 B
+# current buf: size = 8162 B / used = 198 B / count = 20 / avg = 9 B
 
-# strcache performance: lookups = 18 / hit rate = 16%
+# strcache performance: lookups = 31 / hit rate = 35%
 # hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=1/18=6%
-# Finished Make data base on Fri Jul 15 20:22:40 2022
+# Load=20/8192=0%, Rehash=0, Collisions=1/31=3%
+# Finished Make data base on Mon Jul 18 17:50:11 2022
 
  
-make: *** No rule to make target 'all'.  Stop.
-
