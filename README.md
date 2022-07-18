@@ -9,10 +9,9 @@
    - Node/npm: https://nodejs.org/en/download/package-manager/
    - Minikube: https://minikube.sigs.k8s.io/docs/start/
 
-2. Start minikube:
-   `minikube start`
+2. Start minikube: `minikube start`
 
-3. Enable ingress:` minikube addons enable ingress`
+3. Enable ingress: `minikube addons enable ingress`
 
 ## Set up the project
 
