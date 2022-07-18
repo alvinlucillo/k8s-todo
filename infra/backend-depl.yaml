@@ -15,7 +15,7 @@ spec:
    spec:
     containers:
      - name: backend
-       image: alvinlucillo/k8todo-backend:latest
+       image: alvinlucillo/k8stodo-backend:latest
 
 ---
 
