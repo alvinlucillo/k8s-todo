@@ -44,3 +44,5 @@
    replicaset.apps/frontend-depl-69dbc48fcc   1         1         1       27m
    replicaset.apps/mongo-depl-765bbddfc5      1         1         1       27m
    ```
+
+4. Access the app: _yetanothertodo.com_
