@@ -1,5 +1,5 @@
 # k8s-todo
-
+Visit this article for more information: https://medium.com/nullifying-the-null/todo-mern-in-k8s-62d747411128
 ## Set up your environment
 
 1. Install the following
