@@ -6,12 +6,12 @@
 
    - Kubernetes: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
    - Docker: https://docs.docker.com/engine/install/ubuntu/
-   - Node/npm: https://nodejs.org/en/download/package-manager/
    - Minikube: https://minikube.sigs.k8s.io/docs/start/
 
-2. Start minikube: `minikube start`
+2. Install build-essential to use make command: `sudo apt-get install build-essential`
+3. Start minikube: `minikube start`
 
-3. Enable ingress: `minikube addons enable ingress`
+4. Enable ingress: `minikube addons enable ingress`
 
 ## Set up the project
 
