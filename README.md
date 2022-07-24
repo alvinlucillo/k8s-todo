@@ -10,7 +10,6 @@ Visit this article for more information: https://medium.com/nullifying-the-null/
 
 2. Install build-essential to use make command: `sudo apt-get install build-essential`
 3. Start minikube: `minikube start`
-
 4. Enable ingress: `minikube addons enable ingress`
 
 ## Set up the project
@@ -44,4 +43,4 @@ Visit this article for more information: https://medium.com/nullifying-the-null/
    replicaset.apps/mongo-depl-765bbddfc5      1         1         1       27m
    ```
 
-4. Access the app: _yetanothertodo.com_
+4. Access the app via the IP address of the minikube cluster. Get the IP address of the minikube cluster via `minikube ip`. If the IP address is 192.168.49.2, access it via http://192.168.49.2/.
