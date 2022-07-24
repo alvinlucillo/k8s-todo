@@ -14,9 +14,8 @@ Visit this article for more information: https://medium.com/nullifying-the-null/
 
 ## Set up the project
 
-1. Add the domain to your hosts by editing `/etc/hosts `(Linux) and adding _yetanothertodo.com_
-2. Inside the repo folder, enter `make build-app` to build the containers
-3. Wait until all services are up; check it by running `kubectl get all`.
+1. Inside the repo folder, enter `make build-app` to build the containers
+2. Wait until all services are up; check it by running `kubectl get all`.
 
    It should look like this:
 
@@ -43,4 +42,4 @@ Visit this article for more information: https://medium.com/nullifying-the-null/
    replicaset.apps/mongo-depl-765bbddfc5      1         1         1       27m
    ```
 
-4. Access the app via the IP address of the minikube cluster. Get the IP address of the minikube cluster via `minikube ip`. If the IP address is 192.168.49.2, access it via http://192.168.49.2/.
+3. Access the app via the IP address of the minikube cluster. Get the IP address of the minikube cluster via `minikube ip`. If the IP address is 192.168.49.2, access it via http://192.168.49.2/.
