@@ -6,6 +6,7 @@ Visit this article for more information: https://medium.com/nullifying-the-null/
 
    - Kubernetes: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
    - Docker: https://docs.docker.com/engine/install/ubuntu/
+   -    &nbsp; Follow Docker's post-installation step here: https://docs.docker.com/engine/install/linux-postinstall/
    - Minikube: https://minikube.sigs.k8s.io/docs/start/
 
 2. Install build-essential to use make command: `sudo apt-get install build-essential`
